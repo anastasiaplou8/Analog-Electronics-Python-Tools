@@ -1,0 +1,27 @@
+========================================
+ AC Small-Signal Gain Model (CE Stage)
+========================================
+
+      RC = 3.6k               RL = 1k
+
+ Vout o--/\/\/\-----+-----/\/\/\-----o
+                     \  
+                      \ RC_eq = RC || RL
+                      /
+                     /
+                    o   Collector (C)
+                    |
+                   |‾‾‾‾‾‾‾|
+                   |  BJT   |
+                   |________|
+                    |
+                    o   Emitter (E)
+                    |
+                re_total = re + 68Ω
+                    |
+                   GND_ac
+
+Notes:
+- DC sources → GND_ac
+- Coupling capacitors → short circuit
+- Av = - RC_eq / re_total
