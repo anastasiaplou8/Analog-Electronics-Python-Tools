@@ -1,0 +1,27 @@
+========================================
+ AC Input Impedance Model (Zin)
+========================================
+
+       R1 = 10k                     R2 = 2.7k
+  VCC_ac → GND_ac (DC source shorted in AC)
+
+        R1
+VCC o---/\/\/\---+
+                 |
+                 +----o----> Base (B)
+                 |     |
+                 |    Zin_base = β(re+68Ω)
+                 |     |
+        R2       |     |
+GND o---/\/\/\---+    GND_ac
+
+Where:
+
+ Zin_stage = R1 || R2 || Zin_base
+
+Input path:
+
+   Vg~ --- C1(short) ---/\/\/\---o----> B
+                            R6
+
+Vin = Vg * [Zin_stage / (Zin_stage + R6)]
