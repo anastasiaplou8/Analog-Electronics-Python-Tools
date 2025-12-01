@@ -1,0 +1,42 @@
+========================================
+ DC Equivalent Circuit
+========================================
+
+     (DC analysis – capacitors open)
+
+            VCC
+             +
+             |
+            .-.
+            | |  R1
+            | |
+            '-'
+             |
+             o--------> To collector network
+             |
+            .-.
+            | |  R2
+            | |
+            '-'
+             |
+            GND
+
+  Thevenin Equivalent (for base bias):
+
+          Vth
+           +
+           |
+   Vth ----o----/\/\/\----o----> Base (B)
+                Rth       |
+                         |‾‾‾‾‾‾‾|
+                         |  BJT   |
+                         |________|
+                             |
+                           R_E(dc)
+                             |
+                            GND
+
+Notes:
+- C1, C2, C3 are OPEN in DC.
+- Vth = VCC * R2 / (R1 + R2)
+- Rth = R1 || R2
